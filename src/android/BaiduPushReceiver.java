@@ -55,6 +55,9 @@ public class BaiduPushReceiver extends PushMessageReceiver {
             setStringData(data, "userId", userId);
             setStringData(data, "channelId", channelId);
 
+            userIdStorage = userId;
+            channelIdStorage = channelId;
+
             jsonObject.put("data", data);
             jsonObject.put("type", CB_TYPE.onbind);
 

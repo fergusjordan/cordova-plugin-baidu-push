@@ -91,6 +91,35 @@ public class BaiduPush extends CordovaPlugin {
                 }
             });
             ret = true;
+        } else if ("getUserId".equalsIgnoreCase(action)) {
+            pushCallbackContext = callbackContext;
+            String userId;
+            if (BaiduPushReceiver.userIdStorage!= "") {
+                userId = BaiduPushReceiver.userIdStorage;
+                PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, userId);
+                pluginResult.setKeepCallback(true);
+                callbackContext.sendPluginResult(pluginResult);
+            } else {
+                userId = BaiduPushReceiver.userIdStorage;
+                PluginResult pluginResult = new PluginResult(PluginResult.Status.NO_RESULT);
+                pluginResult.setKeepCallback(false);
+                callbackContext.sendPluginResult(pluginResult);
+            }
+            ret = true;
+        } else if ("getChannelId".equalsIgnoreCase(action)) {
+            pushCallbackContext = callbackContext;
+            String channelId;
+            if (BaiduPushReceiver.channelIdStorage!="") {
+                channelId = BaiduPushReceiver.channelIdStorage;
+                PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, channelId);
+                pluginResult.setKeepCallback(true);
+                callbackContext.sendPluginResult(pluginResult);
+            } else {
+                channelId = BaiduPushReceiver.channelIdStorage;
+                PluginResult pluginResult = new PluginResult(PluginResult.Status.NO_RESULT);
+                pluginResult.setKeepCallback(false);
+                callbackContext.sendPluginResult(pluginResult);
+            }
         } else if ("setApplicationIconBadgeNumber".equalsIgnoreCase(action)) {
 
             final String badge = args.getString(0);
