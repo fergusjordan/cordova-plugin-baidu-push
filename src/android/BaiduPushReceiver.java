@@ -28,6 +28,9 @@ public class BaiduPushReceiver extends PushMessageReceiver {
 	/** LOG TAG */
     private static final String LOG_TAG = BaiduPushReceiver.class.getSimpleName();
     private static final String KEY = "badge";
+    public static String userIdStorage = "";
+    public static String channelIdStorage = "";
+
     /** 回调类型 */
     private enum CB_TYPE {
     	onbind,
