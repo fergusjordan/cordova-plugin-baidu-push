@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 import org.apache.cordova.PluginResult;
-import me.leolin.shortcutbadger.ShortcutBadger;
+//import me.leolin.shortcutbadger.ShortcutBadger;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -231,7 +231,7 @@ public class BaiduPushReceiver extends PushMessageReceiver {
             if( strarray.length >= 2 ) {
                 Pattern pattern = Pattern.compile("[0-9]*");
                 if( strarray[0].equals( KEY ) && pattern.matcher(strarray[1]).matches() ) {
-                    ShortcutBadger.applyCount(context, Integer.parseInt( strarray[1] ) );
+                    //ShortcutBadger.applyCount(context, Integer.parseInt( strarray[1] ) );
                 }
             }
 

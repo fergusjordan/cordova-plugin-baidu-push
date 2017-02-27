@@ -4,7 +4,7 @@ import android.app.NotificationManager;
 
 import java.util.ArrayList;
 import java.util.List;
-import me.leolin.shortcutbadger.ShortcutBadger;
+//import me.leolin.shortcutbadger.ShortcutBadger;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
@@ -123,7 +123,7 @@ public class BaiduPush extends CordovaPlugin {
         } else if ("setApplicationIconBadgeNumber".equalsIgnoreCase(action)) {
 
             final String badge = args.getString(0);
-            ShortcutBadger.removeCount(cordova.getActivity().getApplicationContext());
+            //ShortcutBadger.removeCount(cordova.getActivity().getApplicationContext());
 
         } else if ("getApplicationIconBadgeNumber".equalsIgnoreCase(action)) {
 
