@@ -264,6 +264,11 @@ public class BaiduPushReceiver extends PushMessageReceiver {
             jsonObject.put("type", CB_TYPE.onnotificationclicked);
 
             sendPushData(jsonObject);
+
+            Intent i = new Intent();
+            i.setClass( context, MainActivity.class );
+            i.setFlags( Intent.FLAG_ACTIVITY_NEW_TASK );
+            context.startActivity(i);
         } catch (JSONException e) {
             Log.e(LOG_TAG, e.getMessage(), e);
         }
