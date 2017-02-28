@@ -1,6 +1,8 @@
 package org.apache.cordova.baidu;
 
+import android.app.Notification;
 import android.app.NotificationManager;
+import android.content.res.Resources;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,10 +17,10 @@ import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
 
+import com.baidu.android.pushservice.CustomPushNotificationBuilder;
 import com.baidu.android.pushservice.PushConstants;
 import com.baidu.android.pushservice.PushManager;
 import com.baidu.android.pushservice.PushSettings;
-
 /**
  * 百度云推送插件
  * 
@@ -38,8 +40,22 @@ public class BaiduPush extends CordovaPlugin {
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
     	LOG.d(LOG_TAG, "BaiduPush#initialize");
-
         super.initialize(cordova, webView);
+
+        Resources resource = cordova.getActivity().getResources();
+        String pkgName = cordova.getActivity().getPackageName();
+
+        CustomPushNotificationBuilder cBuilder = new CustomPushNotificationBuilder(
+                resource.getIdentifier("notification_custom_builder", "layout", pkgName ),
+                resource.getIdentifier("notification_icon", "id", pkgName),
+                resource.getIdentifier("notification_title", "id", pkgName),
+                resource.getIdentifier("notification_text", "id", pkgName));
+
+        cBuilder.setNotificationFlags(Notification.FLAG_AUTO_CANCEL);
+        cBuilder.setNotificationDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE);
+        cBuilder.setStatusbarIcon(resource.getIdentifier("icon_white", "mipmap", pkgName));
+        cBuilder.setLayoutDrawable(resource.getIdentifier("icon_white", "mipmap", pkgName));
+        PushManager.setDefaultNotificationBuilder( cordova.getActivity(), cBuilder );
     }
 
     /**
