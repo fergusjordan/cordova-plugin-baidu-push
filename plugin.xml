@@ -104,14 +104,14 @@
     <source-file src="src/android/BaiduPush.java" target-dir="src/org/apache/cordova/baidu" />
     <source-file src="src/android/BaiduPushReceiver.java" target-dir="src/org/apache/cordova/baidu" />
 
-    <resource-file src="libs/android/pushservice-5.2.0.12.jar" target="libs/pushservice-5.2.0.12.jar"/>
-    <resource-file src="libs/android/arm64-v8a/libbdpush_V2_7.so" target="libs/arm64-v8a/libbdpush_V2_7.so"/>
-    <resource-file src="libs/android/armeabi/libbdpush_V2_7.so" target="libs/armeabi/libbdpush_V2_7.so"/>
-    <resource-file src="libs/android/armeabi-v7a/libbdpush_V2_7.so" target="libs/armeabi-v7a/libbdpush_V2_7.so"/>
-    <resource-file src="libs/android/mips/libbdpush_V2_7.so" target="libs/mips/libbdpush_V2_7.so"/>
-    <resource-file src="libs/android/mips64/libbdpush_V2_7.so" target="libs/mips64/libbdpush_V2_7.so"/>
-    <resource-file src="libs/android/x86/libbdpush_V2_7.so" target="libs/x86/libbdpush_V2_7.so"/>
-    <resource-file src="libs/android/x86_64/libbdpush_V2_7.so" target="libs/x86_64/libbdpush_V2_7.so"/>
+    <resource-file src="libs/android/pushservice-6.5.0.75.jar" target="libs/pushservice-6.5.0.75.jar"/>
+    <resource-file src="libs/android/arm64-v8a/libbdpush_V2_9.so" target="libs/arm64-v8a/libbdpush_V2_9.so"/>
+    <resource-file src="libs/android/armeabi/libbdpush_V2_9.so" target="libs/armeabi/libbdpush_V2_9.so"/>
+    <resource-file src="libs/android/armeabi-v7a/libbdpush_V2_9.so" target="libs/armeabi-v7a/libbdpush_V2_9.so"/>
+    <resource-file src="libs/android/mips/libbdpush_V2_9.so" target="libs/mips/libbdpush_V2_9.so"/>
+    <resource-file src="libs/android/mips64/libbdpush_V2_9.so" target="libs/mips64/libbdpush_V2_9.so"/>
+    <resource-file src="libs/android/x86/libbdpush_V2_9.so" target="libs/x86/libbdpush_V2_9.so"/>
+    <resource-file src="libs/android/x86_64/libbdpush_V2_9.so" target="libs/x86_64/libbdpush_V2_9.so"/>
   </platform>
 
     <!-- ios -->
