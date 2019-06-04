@@ -94,7 +94,7 @@
       <!-- 适配Android N系统必需的ContentProvider声明，写权限包含应用包名-->
         <provider
             android:name="com.baidu.android.pushservice.PushInfoProvider"
-            android:authorities="$PACKAGE_NAME"
+            android:authorities="$PACKAGE_NAME.bdpush"
             android:writePermission="baidu.push.permission.WRITE_PUSHINFOPROVIDER.$PACKAGE_NAME"
             android:protectionLevel = "signature"
             android:exported="true" />
